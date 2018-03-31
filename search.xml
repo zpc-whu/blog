@@ -2,17 +2,17 @@
 <search>
   <entry>
     <title><![CDATA[中文路径 是否支持]]></title>
-    <url>%2Fblog%2F%E4%B8%AD%E6%96%87%E8%B7%AF%E5%BE%84-%E6%98%AF%E5%90%A6%E6%94%AF%E6%8C%81.html</url>
+    <url>%2Fblog%2Fpost%2F3b8193bb.html</url>
     <content type="text"></content>
   </entry>
   <entry>
     <title><![CDATA[Hello World]]></title>
-    <url>%2Fblog%2Fhello-world.html</url>
+    <url>%2Fblog%2Fpost%2F4a17b156.html</url>
     <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
   </entry>
   <entry>
     <title><![CDATA[前端学习笔记之js中apply()和call()方法详解]]></title>
-    <url>%2Fblog%2Fmy-first-test.html</url>
+    <url>%2Fblog%2Fpost%2F52a7b22c.html</url>
     <content type="text"><![CDATA[经过网上的大量搜索，渐渐明白了apply()和call方法的使用，为此写一篇文章记录一下。 定义 apply()方法： Function.apply(obj,args)obj：这个对象将代替Function类里this对象args：这个是数组，它将作为参数传给Function(args–&gt;arguments） call()方法： Function.call(obj,[param1[,param2[,…[,paramN]]]])obj：这个对象将代替Function类里this对象params：这个是一个参数列表 相同点与不同点 相同点 作用是一样的，call 和 apply 都是为了改变函数体内部 this 的指向，也就是把Function(即this)绑定到obj，这时候obj具备了Function的属性和方法，说白一点就是obj继承了Function的属性和方法。 不同点 相信大家也已经发现了，他们唯一区别就是接受参数的方式不太一样，apply接受的是数组参数，call接受的是连续参数。 方法使用我们来看下面一个例子： 定义一个函数mul 123function mul(a,b)&#123; return this+(a*b);&#125; 接着我们在控制台上打印出 12345console.log(mul.call(null,2,3));console.log(mul.call('s',2,3));console.log(mul.call(3,2,3));console.log(mul.apply(null,[2,5]));console.log(mul.apply(2,[2,5])); 分别为： [object Window]6s69[object Window]1012 可能你会发现到，第一行 console.log(mul.call(null,2,3)) 没什么变化，call()的第一个参数就是改变的 this 指向，如果为 null 则函数的 this 不变，注意，如果在严格模式下（函数体或全局的开头有这句话：’use strict’），this 会变成 null。如果函数本身有参数，则从 call 的第二个参数开始写起。第二行 console.log(mul.call(‘s’,2,3)) 将函数的 this 指向一个字符串 ‘s’. ===&gt;&gt; ‘s’+2 * 3=s6第三行 console.log(mul.call(3,2,3)) 将函数的this指向一个数字3 ===&gt;&gt; 3+2 * 3=9以此类推。 再举一个例子 学js的都知道 Math.max() 方法,比如有三个参数2,3,4那么我们要找出最大值可以这么写 Math.max(2,3,4) 那要是有 100 个或更多参数呢？这时候就可以结合 apply 和数组轻松实现了。 比如定义一个数组 var arr=[2,3,4,5,6,7,8,9,10,23,45,66,22,11]; 接着我们打印出 console.log(Math.max.apply(null,arr)); 这样一来就很简洁明了。 再举一个例子实现对象继承 1234567891011function Person(name,age) &#123; this.name=name; this.age=age;&#125;var Student=function(name,age,gender) &#123; Person.call(this,name,age);//this继承了person的属性和方法 this.gender=gender;&#125;var student=new Student("陈安东", 20, "男");alert("姓名:"+student.name+"\n"+"年龄:"+student.age+"\n"+"性别:"+student.gender); 输出 姓名:陈安东年龄:20性别:男 这样用call就实现了继承（用apply也类似）]]></content>
       <categories>
         <category>other</category>
