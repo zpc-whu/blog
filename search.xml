@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[中文路径 是否支持]]></title>
+    <url>%2Fblog%2F%E4%B8%AD%E6%96%87%E8%B7%AF%E5%BE%84-%E6%98%AF%E5%90%A6%E6%94%AF%E6%8C%81.html</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
     <title><![CDATA[Hello World]]></title>
     <url>%2Fblog%2Fhello-world.html</url>
     <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
