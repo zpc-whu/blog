@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://pczhao.top/blog/"/>
-  <updated>2018-03-31T05:35:00.733Z</updated>
+  <updated>2018-03-31T05:43:51.807Z</updated>
   <id>https://pczhao.top/blog/</id>
   
   <author>
@@ -17,25 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>中文路径 是否支持</title>
-    <link href="https://pczhao.top/blog/post/3b8193bb.html"/>
-    <id>https://pczhao.top/blog/post/3b8193bb.html</id>
-    <published>2018-03-31T05:35:00.000Z</published>
-    <updated>2018-03-31T05:35:00.733Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
     <title>Hello World</title>
     <link href="https://pczhao.top/blog/post/4a17b156.html"/>
     <id>https://pczhao.top/blog/post/4a17b156.html</id>
-    <published>2018-03-31T03:02:30.719Z</published>
-    <updated>2018-03-31T03:02:30.719Z</updated>
+    <published>2018-03-31T05:43:51.807Z</published>
+    <updated>2018-03-31T05:43:51.807Z</updated>
     
     <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><a id="more"></a><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
     
@@ -49,11 +35,25 @@
   </entry>
   
   <entry>
+    <title>中文路径 是否支持</title>
+    <link href="https://pczhao.top/blog/post/3b8193bb.html"/>
+    <id>https://pczhao.top/blog/post/3b8193bb.html</id>
+    <published>2018-03-31T05:35:00.000Z</published>
+    <updated>2018-03-31T05:43:51.813Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>前端学习笔记之js中apply()和call()方法详解</title>
     <link href="https://pczhao.top/blog/post/52a7b22c.html"/>
     <id>https://pczhao.top/blog/post/52a7b22c.html</id>
     <published>2018-03-30T13:11:16.000Z</published>
-    <updated>2018-03-31T02:58:41.699Z</updated>
+    <updated>2018-03-31T05:43:51.825Z</updated>
     
     <content type="html"><![CDATA[<blockquote><p>经过网上的大量搜索，渐渐明白了apply()和call方法的使用，为此写一篇文章记录一下。</p></blockquote><a id="more"></a><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a><strong>定义</strong></h3><ul><li><p><strong>apply()方法</strong>：</p><blockquote><p>Function.apply(obj,args)<br>obj：这个对象将代替Function类里this对象<br>args：这个是数组，它将作为参数传给Function(args–&gt;arguments）</p></blockquote></li><li><p><strong>call()方法</strong>：</p><blockquote><p>Function.call(obj,[param1[,param2[,…[,paramN]]]])<br>obj：这个对象将代替Function类里this对象<br>params：这个是一个参数列表</p></blockquote></li></ul><hr><h3 id="相同点与不同点"><a href="#相同点与不同点" class="headerlink" title="相同点与不同点"></a><strong>相同点与不同点</strong></h3><ol><li><p><strong>相同点</strong></p><p> 作用是一样的，call 和 apply 都是为了改变函数体内部 this 的指向，也就是把Function(即this)绑定到obj，这时候obj具备了Function的属性和方法，说白一点就是obj继承了Function的属性和方法。</p></li><li><p><strong>不同点</strong></p><p> 相信大家也已经发现了，他们唯一区别就是接受参数的方式不太一样，apply接受的是数组参数，call接受的是连续参数。</p></li></ol><hr><h3 id="方法使用"><a href="#方法使用" class="headerlink" title="方法使用"></a><strong>方法使用</strong></h3><p><strong>我们来看下面一个例子：</strong></p><p>定义一个函数mul</p><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">mul</span><span class="params">(a,b)</span></span>&#123;</span><br><span class="line"><span class="keyword">return</span> <span class="keyword">this</span>+(a*b);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>接着我们在控制台上打印出</p><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">console.log(mul.call(null,<span class="number">2</span>,<span class="number">3</span>));</span><br><span class="line">console.log(mul.call('s',<span class="number">2</span>,<span class="number">3</span>));</span><br><span class="line">console.log(mul.call(<span class="number">3</span>,<span class="number">2</span>,<span class="number">3</span>));</span><br><span class="line">console.log(mul.apply(null,[<span class="number">2</span>,<span class="number">5</span>]));</span><br><span class="line">console.log(mul.apply(<span class="number">2</span>,[<span class="number">2</span>,<span class="number">5</span>]));</span><br></pre></td></tr></table></figure><p>分别为：</p><blockquote><p>[object Window]6<br>s6<br>9<br>[object Window]10<br>12</p></blockquote><p>可能你会发现到，第一行 <strong>console.log(mul.call(null,2,3))</strong> 没什么变化，call()的第一个参数就是改变的 this 指向，如果为 null 则函数的 this 不变，注意，如果在严格模式下（函数体或全局的开头有这句话：’use strict’），this 会变成 null。如果函数本身有参数，则从 call 的第二个参数开始写起。<br>第二行 <strong>console.log(mul.call(‘s’,2,3))</strong> 将函数的 this 指向一个字符串 ‘s’.    ===&gt;&gt;  ‘s’+2 * 3=s6<br>第三行 <strong>console.log(mul.call(3,2,3))</strong>  将函数的this指向一个数字3<br>     ===&gt;&gt;   3+2 * 3=9<br>以此类推。</p><p><strong>再举一个例子</strong></p><p>学js的都知道 <strong>Math.max()</strong> 方法,比如有三个参数2,3,4那么我们要找出最大值可以这么写 <strong>Math.max(2,3,4)</strong> 那要是有 100 个或更多参数呢？这时候就可以结合 apply 和数组轻松实现了。</p><p>比如定义一个数组</p><blockquote><p>var arr=[2,3,4,5,6,7,8,9,10,23,45,66,22,11];</p></blockquote><p>接着我们打印出</p><blockquote><p>console.log(Math.max.apply(null,arr));</p></blockquote><p>这样一来就很简洁明了。</p><p><strong>再举一个例子实现对象继承</strong></p><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span><span class="params">(name,age)</span> </span>&#123;</span><br><span class="line"><span class="keyword">this</span>.name=name;</span><br><span class="line"><span class="keyword">this</span>.age=age;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> Student=<span class="function"><span class="keyword">function</span><span class="params">(name,age,gender)</span> </span>&#123;</span><br><span class="line">Person.call(<span class="keyword">this</span>,name,age);<span class="comment">//this继承了person的属性和方法</span></span><br><span class="line"><span class="keyword">this</span>.gender=gender;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> student=<span class="keyword">new</span> Student(<span class="string">"陈安东"</span>, <span class="number">20</span>, <span class="string">"男"</span>);</span><br><span class="line">alert(<span class="string">"姓名:"</span>+student.name+<span class="string">"\n"</span>+<span class="string">"年龄:"</span>+student.age+<span class="string">"\n"</span>+<span class="string">"性别:"</span>+student.gender);</span><br></pre></td></tr></table></figure><p>输出</p><blockquote><p>姓名:陈安东<br>年龄:20<br>性别:男</p></blockquote><p>这样用call就实现了继承（用apply也类似）</p>]]></content>
     
