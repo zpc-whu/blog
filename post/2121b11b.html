@@ -131,7 +131,7 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://pczhao.top/blog/post/1.1.jpg">
 <meta property="og:image" content="https://pczhao.top/blog/post/1.2.jpg">
-<meta property="og:updated_time" content="2018-03-31T14:32:35.111Z">
+<meta property="og:updated_time" content="2018-03-31T14:38:50.168Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git 教程">
 <meta name="twitter:description" content="个人 Git 学习记录">
@@ -458,9 +458,7 @@
     
 
     
-    <blockquote>
-<p>个人 Git 学习记录<br><a id="more"></a></p>
-</blockquote>
+    <p>个人 Git 学习记录<br><a id="more"></a></p>
 <h1 id="Git-简介"><a href="#Git-简介" class="headerlink" title="Git 简介"></a>Git 简介</h1><h3 id="Git-是什么"><a href="#Git-是什么" class="headerlink" title="Git 是什么"></a>Git 是什么</h3><p>Git 是目前世界上最先进的分布式版本控制系统。<br>2005年，Linus为了管理Linux系统的源码，花了两周时间自己用C写了一个分布式版本控制系统，这就是Git！</p>
 <h3 id="集中式和分布式版本控制系统的区别"><a href="#集中式和分布式版本控制系统的区别" class="headerlink" title="集中式和分布式版本控制系统的区别"></a>集中式和分布式版本控制系统的区别</h3><p>集中式版本控制系统（CVS,SVN…），版本库是集中存放在中央服务器的，而干活的时候，用的都是自己的电脑，所以要先从中央服务器取得最新的版本，然后开始干活，干完活了，再把自己的活推送给中央服务器。中央服务器就好比是一个图书馆，你要改一本书，必须先从图书馆借出来，然后回到家自己改，改完了，再放回图书馆。<br><img src="1.1.jpg" alt="avatar"><br>分布式版本控制系统根本没有“中央服务器”，每个人的电脑上都是一个完整的版本库，这样，你工作的时候，就不需要联网了，因为版本库就在你自己的电脑上。分布式版本控制系统的安全性要高很多，因为每个人电脑里都有完整的版本库，某一个人的电脑坏掉了不要紧，随便从其他人那里复制一个就可以了。<br><img src="1.2.jpg" alt="avatar"></p>
 <h3 id="Git-安装"><a href="#Git-安装" class="headerlink" title="Git 安装"></a>Git 安装</h3><p>在Linux上安装Git<br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-<span class="builtin-name">get</span> install git</span><br><span class="line">$ git --version # 查看当前git的版本</span><br><span class="line">$ git --help # 查看git基本命令</span><br><span class="line">$ git<span class="built_in"> config </span>--global user.name <span class="string">"Your Name"</span></span><br><span class="line">$ git<span class="built_in"> config </span>--global user.email <span class="string">"email@example.com"</span></span><br></pre></td></tr></table></figure></p>
