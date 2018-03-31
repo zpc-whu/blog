@@ -642,17 +642,31 @@
 
 
   
-    <script type="text/javascript">
-      (function(d, s) {
-        var j, e = d.getElementsByTagName(s)[0];
-        if (typeof LivereTower === 'function') { return; }
-        j = d.createElement(s);
-        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-        j.async = true;
-        e.parentNode.insertBefore(j, e);
-      })(document, 'script');
-    </script>
-  
+
+
+   
+   
+   
+   
+   <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+   <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+   
+       <script type="text/javascript">
+           function ShowGitment(){
+               document.getElementById("gitment-display-button").style.display = "none";
+               document.getElementById("gitment-container").style.display = "block";
+               var gitment = new Gitment({
+                   id: document.location.href, 
+                   owner: 'zpc-whu',
+                   repo: 'blog',
+                   oauth: {
+                       client_id: '1ad4725ec23e3705d618',
+                       client_secret: '1e1d0ea92b3fbe4170c73c866fb2e82264de2dc3',
+                   }});
+               gitment.render('gitment-container');
+           }
+       </script>
+   
 
 
 
@@ -792,7 +806,7 @@
 
   
   <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
-  <script>AV.initialize("joaeuuc4hsqudUUwx4gIvGF6-gzGzoHsz", "E9UJsJpw1omCHuS22PdSpKoh");</script>
+  <script>AV.initialize("8OeWcVbxkE0tkyY4QqXbrKsN-gzGzoHsz", "D1wJnoCwiFjGvV1bRPVqJY0R");</script>
   <script>
     function showTime(Counter) {
       var query = new AV.Query(Counter);
