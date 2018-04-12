@@ -103,7 +103,7 @@
 <link href="/blog/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="test," />
+  <meta name="keywords" content="Markdown," />
 
 
 
@@ -121,18 +121,20 @@
 
 
 
-<meta name="description" content="经过网上的大量搜索，渐渐明白了apply()和call方法的使用，为此写一篇文章记录一下。">
-<meta name="keywords" content="test">
+<meta name="description" content="Markdown 学习记录">
+<meta name="keywords" content="Markdown">
 <meta property="og:type" content="article">
-<meta property="og:title" content="前端学习笔记之js中apply()和call()方法详解">
-<meta property="og:url" content="https://pczhao.top/blog/post/52a7b22c.html">
+<meta property="og:title" content="Markdown 教程">
+<meta property="og:url" content="https://pczhao.top/blog/post/84c9aef3.html">
 <meta property="og:site_name" content="ZPC&#39;s Blog">
-<meta property="og:description" content="经过网上的大量搜索，渐渐明白了apply()和call方法的使用，为此写一篇文章记录一下。">
+<meta property="og:description" content="Markdown 学习记录">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-31T08:59:42.314Z">
+<meta property="og:image" content="https://pczhao.top/blog/post/video.png">
+<meta property="og:updated_time" content="2018-04-05T12:50:05.504Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="前端学习笔记之js中apply()和call()方法详解">
-<meta name="twitter:description" content="经过网上的大量搜索，渐渐明白了apply()和call方法的使用，为此写一篇文章记录一下。">
+<meta name="twitter:title" content="Markdown 教程">
+<meta name="twitter:description" content="Markdown 学习记录">
+<meta name="twitter:image" content="https://pczhao.top/blog/post/video.png">
 
 
 
@@ -153,7 +155,7 @@
 
 
 
-  <link rel="canonical" href="https://pczhao.top/blog/post/52a7b22c.html"/>
+  <link rel="canonical" href="https://pczhao.top/blog/post/84c9aef3.html"/>
 
 
 
@@ -171,7 +173,7 @@
 
 
 
-  <title> 前端学习笔记之js中apply()和call()方法详解 | ZPC's Blog </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title> Markdown 教程 | ZPC's Blog </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 
@@ -330,7 +332,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="https://pczhao.top/blog/blog/post/52a7b22c.html">
+  <link itemprop="mainEntityOfPage" href="https://pczhao.top/blog/blog/post/84c9aef3.html">
   
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="赵鹏程 (Pengcheng Zhao)">
@@ -348,7 +350,7 @@
     
     
       <h1 class="post-title" itemprop="name headline">
-        前端学习笔记之js中apply()和call()方法详解</h1>
+        Markdown 教程</h1>
         
 
     <div class="post-meta">
@@ -360,8 +362,8 @@
 
       <span class="post-meta-item-text">发表于</span>
 
-      <time itemprop="dateCreated" datetime="2018-03-02T21:11:16+08:00" content="2018-03-02">
-        2018-03-02
+      <time itemprop="dateCreated" datetime="2018-04-05T00:00:00+08:00" content="2018-04-05">
+        2018-04-05
       </time>
 
       </span>
@@ -375,8 +377,8 @@
         <span class="post-meta-item-text">分类于</span>
         
         <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-          <a href="/blog/categories/other/" itemprop="url" rel="index">
-          <span itemprop="name">other</span>
+          <a href="/blog/categories/Programmer/" itemprop="url" rel="index">
+          <span itemprop="name">Programmer</span>
           </a>
         </span>
 
@@ -395,7 +397,7 @@
 
       
       
-       <span id="/blog/post/52a7b22c.html" class="leancloud_visitors" data-flag-title="前端学习笔记之js中apply()和call()方法详解">
+       <span id="/blog/post/84c9aef3.html" class="leancloud_visitors" data-flag-title="Markdown 教程">
          &nbsp; | &nbsp;
          <span class="post-meta-item-icon">
          <i class="fa fa-eye"></i>
@@ -420,7 +422,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  714 字
+                  1,075 字
                 </span>
               
 
@@ -436,7 +438,7 @@
                   <span class="post-meta-item-text">阅读时长</span>
                 
                 <span title="阅读时长">
-                  3 分钟
+                  5 分钟
                 </span>
               
             </div>
@@ -455,61 +457,131 @@
     
 
     
-    <blockquote>
-<p>经过网上的大量搜索，渐渐明白了apply()和call方法的使用，为此写一篇文章记录一下。</p>
-</blockquote>
-<a id="more"></a>
-<h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a><strong>定义</strong></h3><ul>
-<li><p><strong>apply()方法</strong>：</p>
-<blockquote>
-<p>Function.apply(obj,args)<br>obj：这个对象将代替Function类里this对象<br>args：这个是数组，它将作为参数传给Function(args–&gt;arguments）</p>
-</blockquote>
-</li>
-<li><p><strong>call()方法</strong>：</p>
-<blockquote>
-<p>Function.call(obj,[param1[,param2[,…[,paramN]]]])<br>obj：这个对象将代替Function类里this对象<br>params：这个是一个参数列表</p>
-</blockquote>
-</li>
-</ul>
-<hr>
-<h3 id="相同点与不同点"><a href="#相同点与不同点" class="headerlink" title="相同点与不同点"></a><strong>相同点与不同点</strong></h3><ol>
-<li><p><strong>相同点</strong></p>
-<p> 作用是一样的，call 和 apply 都是为了改变函数体内部 this 的指向，也就是把Function(即this)绑定到obj，这时候obj具备了Function的属性和方法，说白一点就是obj继承了Function的属性和方法。</p>
-</li>
-<li><p><strong>不同点</strong></p>
-<p> 相信大家也已经发现了，他们唯一区别就是接受参数的方式不太一样，apply接受的是数组参数，call接受的是连续参数。</p>
-</li>
-</ol>
-<hr>
-<h3 id="方法使用"><a href="#方法使用" class="headerlink" title="方法使用"></a><strong>方法使用</strong></h3><p><strong>我们来看下面一个例子：</strong></p>
-<p>定义一个函数mul</p>
-<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">mul</span><span class="params">(a,b)</span></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="keyword">this</span>+(a*b);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>接着我们在控制台上打印出</p>
-<figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">console.log(mul.call(null,<span class="number">2</span>,<span class="number">3</span>));</span><br><span class="line">console.log(mul.call('s',<span class="number">2</span>,<span class="number">3</span>));</span><br><span class="line">console.log(mul.call(<span class="number">3</span>,<span class="number">2</span>,<span class="number">3</span>));</span><br><span class="line">console.log(mul.apply(null,[<span class="number">2</span>,<span class="number">5</span>]));</span><br><span class="line">console.log(mul.apply(<span class="number">2</span>,[<span class="number">2</span>,<span class="number">5</span>]));</span><br></pre></td></tr></table></figure>
-<p>分别为：</p>
-<blockquote>
-<p>[object Window]6<br>s6<br>9<br>[object Window]10<br>12</p>
-</blockquote>
-<p>可能你会发现到，第一行 <strong>console.log(mul.call(null,2,3))</strong> 没什么变化，call()的第一个参数就是改变的 this 指向，如果为 null 则函数的 this 不变，注意，如果在严格模式下（函数体或全局的开头有这句话：’use strict’），this 会变成 null。如果函数本身有参数，则从 call 的第二个参数开始写起。<br>第二行 <strong>console.log(mul.call(‘s’,2,3))</strong> 将函数的 this 指向一个字符串 ‘s’.    ===&gt;&gt;  ‘s’+2 * 3=s6<br>第三行 <strong>console.log(mul.call(3,2,3))</strong>  将函数的this指向一个数字3<br>     ===&gt;&gt;   3+2 * 3=9<br>以此类推。</p>
-<p><strong>再举一个例子</strong></p>
-<p>学js的都知道 <strong>Math.max()</strong> 方法,比如有三个参数2,3,4那么我们要找出最大值可以这么写 <strong>Math.max(2,3,4)</strong> 那要是有 100 个或更多参数呢？这时候就可以结合 apply 和数组轻松实现了。</p>
-<p>比如定义一个数组</p>
-<blockquote>
-<p>var arr=[2,3,4,5,6,7,8,9,10,23,45,66,22,11];</p>
-</blockquote>
-<p>接着我们打印出</p>
-<blockquote>
-<p>console.log(Math.max.apply(null,arr));</p>
-</blockquote>
-<p>这样一来就很简洁明了。</p>
-<p><strong>再举一个例子实现对象继承</strong></p>
-<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span><span class="params">(name,age)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">this</span>.name=name;</span><br><span class="line">	<span class="keyword">this</span>.age=age;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> Student=<span class="function"><span class="keyword">function</span><span class="params">(name,age,gender)</span> </span>&#123;</span><br><span class="line">	Person.call(<span class="keyword">this</span>,name,age);<span class="comment">//this继承了person的属性和方法</span></span><br><span class="line">	<span class="keyword">this</span>.gender=gender;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> student=<span class="keyword">new</span> Student(<span class="string">"陈安东"</span>, <span class="number">20</span>, <span class="string">"男"</span>);</span><br><span class="line">alert(<span class="string">"姓名:"</span>+student.name+<span class="string">"\n"</span>+<span class="string">"年龄:"</span>+student.age+<span class="string">"\n"</span>+<span class="string">"性别:"</span>+student.gender);</span><br></pre></td></tr></table></figure>
-<p>输出</p>
-<blockquote>
-<p>姓名:陈安东<br>年龄:20<br>性别:男</p>
-</blockquote>
-<p>这样用call就实现了继承（用apply也类似）</p>
+    <p>Markdown 学习记录<br><a id="more"></a></p>
+<h1 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h1><p>注：<code>#</code> 后面保持空格<br><figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"># h1</span><br><span class="line">## h2</span><br><span class="line">### h3</span><br><span class="line">#### h4</span><br><span class="line">##### h5</span><br><span class="line">###### h6</span><br><span class="line">####### h7      <span class="comment">// 错误代码</span></span><br><span class="line">######## h8     <span class="comment">// 错误代码</span></span><br><span class="line">######### h9    <span class="comment">// 错误代码</span></span><br><span class="line">########## h10  <span class="comment">// 错误代码</span></span><br></pre></td></tr></table></figure></p>
+<h1 id="分级标题"><a href="#分级标题" class="headerlink" title="分级标题"></a><os style="color: #AD5D0F">分级标题</os></h1><p>注：<code>= -</code> 最少可以只写一个，兼容性一般<br><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">一级标题</span><br><span class="line">======================</span><br><span class="line">二级标题</span><br><span class="line">---------------------</span><br></pre></td></tr></table></figure></p>
+<h1 id="TOC"><a href="#TOC" class="headerlink" title="TOC"></a><os style="color: #AD5D0F">TOC</os></h1><p>注：根据标题生成目录，兼容性一般<br><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[TOC]</span><br></pre></td></tr></table></figure></p>
+<h1 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h1><p>注1：单行式<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;</span><span class="bash"> hello world!</span></span><br></pre></td></tr></table></figure></p>
+<p>注2：多行式<br><figure class="highlight erlang-repl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt; hello world!</span><br><span class="line">hello world!</span><br><span class="line">hello world!</span><br></pre></td></tr></table></figure></p>
+<p>注3：多层嵌套<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;</span><span class="bash"> aaaaaaaaa</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt; bbbbbbbbb</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;&gt; cccccccccc</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt; dddddddd</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"></span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> eeeeeeee</span></span><br></pre></td></tr></table></figure></p>
+<h1 id="行内标记"><a href="#行内标记" class="headerlink" title="行内标记"></a>行内标记</h1><p>注：用 ` 标记代码块将变成一行<br><figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">标记之外`hello world`标记之外</span><br></pre></td></tr></table></figure></p>
+<h1 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h1><p>注2：Tab<br><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">我是文字……</span><br><span class="line"></span><br><span class="line">    &lt;<span class="keyword">div</span>&gt;   </span><br><span class="line">        &lt;<span class="keyword">div</span>&gt;&lt;/<span class="keyword">div</span>&gt;</span><br><span class="line">        &lt;<span class="keyword">div</span>&gt;&lt;/<span class="keyword">div</span>&gt;</span><br><span class="line">        &lt;<span class="keyword">div</span>&gt;&lt;/<span class="keyword">div</span>&gt;</span><br><span class="line">    &lt;/<span class="keyword">div</span>&gt;</span><br></pre></td></tr></table></figure></p>
+<p>注3：自定义语法—根据不同的语言配置不同的代码着色</p>
+<pre><code><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> num = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++) &#123;</span><br><span class="line">    num+=i;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(num);</span><br></pre></td></tr></table></figure>
+</code></pre><h1 id="插入链接"><a href="#插入链接" class="headerlink" title="插入链接"></a>插入链接</h1><p>注1：内链式<br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">百度</span>](<span class="link">http://www.baidu.com/</span>)</span><br></pre></td></tr></table></figure></p>
+<p>注2：引用式<br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">百度</span>][<span class="symbol">2</span>]</span><br><span class="line"></span><br><span class="line">[<span class="symbol">2</span>]: <span class="link">(http://www.baidu.com/)</span></span><br></pre></td></tr></table></figure></p>
+<h1 id="插入图片"><a href="#插入图片" class="headerlink" title="插入图片"></a>插入图片</h1><p>注1：内链式<br><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">!<span class="selector-attr">[]</span>(./test.png <span class="string">'描述信息'</span>)</span><br></pre></td></tr></table></figure></p>
+<p>注2：引用式<br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">![<span class="string">name</span>][<span class="symbol">01</span>]</span><br><span class="line"></span><br><span class="line">[<span class="symbol">01</span>]: <span class="link">http://p6i24hxpq.bkt.clouddn.com/blog/1.2.jpg '描述'</span></span><br></pre></td></tr></table></figure></p>
+<h1 id="插入图片带有链接"><a href="#插入图片带有链接" class="headerlink" title="插入图片带有链接"></a>插入图片带有链接</h1><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">![</span>](<span class="link">./test.png '百度'</span>)](<span class="link">http://www.baidu.com</span>)</span><br><span class="line"></span><br><span class="line">[<span class="string">![</span>](<span class="link">./test.png '百度'</span>)][<span class="symbol">5</span>]</span><br><span class="line"></span><br><span class="line">[<span class="symbol">5</span>]: <span class="link">http://www.baidu.com</span></span><br></pre></td></tr></table></figure>
+<h1 id="视频插入"><a href="#视频插入" class="headerlink" title="视频插入"></a>视频插入</h1><p>Markdown 语法是不支持直接插入视频的<br>注1：插入HTML的 iframe 框架，多数第三方平台不支持插入<code>&lt;iframe&gt;</code>视频      </p>
+<iframe height="300" width="400" src="http://player.youku.com/embed/XMjgzNzM0NTYxNg==" frameborder="0" 'allowfullscreen'=""></iframe>
 
+<p>注2：伪造播放界面，实质是插入视频图片，然后通过点击跳转到相关页面<br><a href="http://player.youku.com/embed/XMjgzNzM0NTYxNg==" target="_blank" rel="noopener"><img src="./video.png" alt=""></a></p>
+<h1 id="序表"><a href="#序表" class="headerlink" title="序表"></a>序表</h1><p>注1：有序 — 序列.后 保持空格<br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">1. </span>one</span><br><span class="line"><span class="bullet">2. </span>two</span><br><span class="line"><span class="bullet">3. </span>three</span><br></pre></td></tr></table></figure></p>
+<p>注2：无序<br><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">* </span>one</span><br><span class="line"><span class="bullet">* </span>two</span><br><span class="line"><span class="bullet">* </span>three</span><br></pre></td></tr></table></figure></p>
+<p>注3：序表嵌套<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span> one</span><br><span class="line">    <span class="number">1.</span> one<span class="number">-1</span></span><br><span class="line">    <span class="number">2.</span> two<span class="number">-2</span></span><br><span class="line"><span class="number">2.</span> two </span><br><span class="line">    * two<span class="number">-1</span></span><br><span class="line">    * two<span class="number">-2</span></span><br></pre></td></tr></table></figure></p>
+<p>注4：序表嵌套代码块 — 换行+两个Tab<br><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">+ one</span><br><span class="line"></span><br><span class="line">        var a = <span class="number">10</span><span class="comment">;   </span></span><br><span class="line">        var <span class="keyword">b </span>= <span class="number">10</span><span class="comment">;</span></span><br><span class="line">+ two</span><br><span class="line"></span><br><span class="line">        var a = <span class="number">10</span><span class="comment">;   </span></span><br><span class="line">        var <span class="keyword">b </span>= <span class="number">10</span><span class="comment">;</span></span><br></pre></td></tr></table></figure></p>
+<h1 id="任务列表"><a href="#任务列表" class="headerlink" title="任务列表"></a>任务列表</h1><p>注：兼容性一般，要隔开一行<br><figure class="highlight haml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">这是文字</span><br><span class="line"></span><br><span class="line">-<span class="ruby"> [x] 选项<span class="number">1</span></span></span><br><span class="line"><span class="ruby">- [ ] 选项<span class="number">2</span> </span></span><br><span class="line"><span class="ruby">- [ ] 选项<span class="number">3</span></span></span><br></pre></td></tr></table></figure></p>
+<h1 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h1><p>: 代表对齐方式 ,<strong> : 与 | 之间不要有空格</strong>，否则对齐会有些不兼容<br>注1：写法<br><figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">|<span class="string"> a </span>|<span class="string"> b </span>|<span class="string"> c </span>|</span><br><span class="line">|<span class="string">:-:</span>|<span class="string">:- </span>|<span class="string"> -:</span>|</span><br><span class="line">|<span class="string"> 居中 </span>|<span class="string"> 左对齐 </span>|<span class="string"> 右对齐 </span>|</span><br><span class="line">|<span class="string">============</span>|<span class="string">=================</span>|<span class="string">=============</span>|</span><br></pre></td></tr></table></figure></p>
+<p>注2：特殊表格<br>一般对合并单元格，以及其他特殊格式表格，markdown 是无能为力的所以常规的做法是使用HTML标签，但是这样的编写效率极低。但是有了在线生成HTML代码 <a href="http://www.tablesgenerator.com/" target="_blank" rel="noopener">Tables Generator</a> (国外的站)，所有问题都迎刃而解。</p>
+<h1 id="支持内嵌CSS样式"><a href="#支持内嵌CSS样式" class="headerlink" title="支持内嵌CSS样式"></a>支持内嵌CSS样式</h1><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">style</span>=<span class="string">"color: #AD5D0F;font-size: 30px; font-family: '宋体';"</span>&gt;</span>内联样式<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h1 id="语义标记"><a href="#语义标记" class="headerlink" title="语义标记"></a>语义标记</h1><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">描述</th>
+<th style="text-align:left">效果</th>
+<th style="text-align:left">代码</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">斜体</td>
+<td style="text-align:left"><em>斜体</em></td>
+<td style="text-align:left">*斜体*</td>
+</tr>
+<tr>
+<td style="text-align:left">斜体</td>
+<td style="text-align:left"><em>斜体</em></td>
+<td style="text-align:left">_斜体_</td>
+</tr>
+<tr>
+<td style="text-align:left">加粗</td>
+<td style="text-align:left"><strong>加粗</strong></td>
+<td style="text-align:left"><code>**加粗**</code></td>
+</tr>
+<tr>
+<td style="text-align:left">加粗+斜体</td>
+<td style="text-align:left"><strong><em>加粗+斜体</em></strong></td>
+<td style="text-align:left"><code>***加粗+斜体***</code></td>
+</tr>
+<tr>
+<td style="text-align:left">删除线</td>
+<td style="text-align:left"><del>删除线</del></td>
+<td style="text-align:left"><code>~~删除线~~</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1 id="语义标签"><a href="#语义标签" class="headerlink" title="语义标签"></a>语义标签</h1><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">描述</th>
+<th style="text-align:left">效果</th>
+<th style="text-align:left">代码</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">斜体</td>
+<td style="text-align:left"><i>斜体</i></td>
+<td style="text-align:left"><code>&lt;i&gt;斜体&lt;/i&gt;</code></td>
+</tr>
+<tr>
+<td style="text-align:left">加粗</td>
+<td style="text-align:left"><b>加粗</b></td>
+<td style="text-align:left"><code>&lt;b&gt;加粗&lt;/b&gt;</code></td>
+</tr>
+<tr>
+<td style="text-align:left">强调</td>
+<td style="text-align:left"><em>强调</em></td>
+<td style="text-align:left"><code>&lt;em&gt;强调&lt;/em&gt;</code></td>
+</tr>
+<tr>
+<td style="text-align:left">上标</td>
+<td style="text-align:left">Z<sup>a</sup></td>
+<td style="text-align:left"><code>Z&lt;sup&gt;a&lt;/sup&gt;</code></td>
+</tr>
+<tr>
+<td style="text-align:left">下标</td>
+<td style="text-align:left">Z<sub>a</sub></td>
+<td style="text-align:left"><code>Z&lt;sub&gt;a&lt;/sub&gt;</code></td>
+</tr>
+<tr>
+<td style="text-align:left">键盘文本</td>
+<td style="text-align:left"><kbd>Ctrl</kbd></td>
+<td style="text-align:left"><code>&lt;kbd&gt;Ctrl&lt;/kbd&gt;</code></td>
+</tr>
+<tr>
+<td style="text-align:left">换行</td>
+<td style="text-align:left"></td>
+<td style="text-align:left"><code> </code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1 id="公式"><a href="#公式" class="headerlink" title="公式"></a>公式</h1><p>注：1个<code>$</code>左对齐，2个居中<br><figure class="highlight gams"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"><span class="meta-keyword">$x</span> = &#123;-b \pm \sqrt&#123;b^2-4ac&#125; \over 2a&#125;$</span></span><br><span class="line"></span><br><span class="line"><span class="symbol">$</span><span class="symbol">$</span>x = y^<span class="number">2</span> + <span class="number">1</span><span class="symbol">$</span><span class="symbol">$</span></span><br><span class="line">  </span><br><span class="line"><span class="symbol">$</span>\<span class="built-in">frac</span>&#123;<span class="number">7</span>x+<span class="number">5</span>&#125;&#123;<span class="number">1</span>+y^<span class="number">2</span>&#125;<span class="symbol">$</span></span><br><span class="line"></span><br><span class="line"><span class="symbol">$</span><span class="symbol">$</span>\sum_&#123;i=<span class="number">0</span>&#125;^N\int_&#123;a&#125;^&#123;b&#125;g(t,i)\text&#123;d&#125;t<span class="symbol">$</span><span class="symbol">$</span></span><br></pre></td></tr></table></figure></p>
+<p>$x = {-b \pm \sqrt{b^2-4ac} \over 2a}$</p>
+<script type="math/tex; mode=display">x = y^2 + 1</script><p>$\frac{7x+5}{1+y^2}$</p>
+<script type="math/tex; mode=display">\sum_{i=0}^N\int_{a}^{b}g(t,i)\text{d}t</script><h1 id="分隔符"><a href="#分隔符" class="headerlink" title="分隔符"></a>分隔符</h1><p>注：最少三个 <em>**或 —- 或 </em> <em> </em><br><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">**<span class="strong">*</span></span><br><span class="line"><span class="strong">---</span></span><br><span class="line"><span class="strong">*</span> * <span class="strong">*</span></span><br></pre></td></tr></table></figure></p>
+<h1 id="脚注"><a href="#脚注" class="headerlink" title="脚注"></a><os style="color: #AD5D0F">脚注</os></h1><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Markdown[^1]</span><br><span class="line"></span><br><span class="line">[<span class="symbol">^1</span>]: <span class="link">Markdown是一种纯文本标记语言</span></span><br></pre></td></tr></table></figure>
+<h1 id="锚点"><a href="#锚点" class="headerlink" title="锚点"></a><os style="color: #AD5D0F">锚点</os></h1><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">公式标题锚点</span>](<span class="link">#1</span>)</span><br><span class="line"></span><br><span class="line"><span class="section">### [需要跳转的目录] &#123;#1&#125;</span></span><br></pre></td></tr></table></figure>
+<h1 id="自动邮箱链接"><a href="#自动邮箱链接" class="headerlink" title="自动邮箱链接"></a>自动邮箱链接</h1><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="selector-tag">xxx</span>@<span class="keyword">outlook</span>.<span class="keyword">com</span>&gt;</span><br></pre></td></tr></table></figure>
+<h1 id="流程图"><a href="#流程图" class="headerlink" title="流程图"></a>流程图</h1><p>flow<br>st=&gt;start: 开始<br>e=&gt;end: 结束<br>c1=&gt;condition: 条件1<br>c2=&gt;condition: 条件2<br>c3=&gt;condition: 条件3<br>io=&gt;inputoutput: 输出</p>
+<p>st-&gt;c1(yes,right)-&gt;c2(yes,right)-&gt;c3(yes,right)-&gt;io-&gt;e<br>c1(no)-&gt;e<br>c2(no)-&gt;e<br>c3(no)-&gt;e</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">A-&gt;&gt;B: 你好</span><br><span class="line">Note left of A: 我在左边     // 注释方向，只有左右，没有上下</span><br><span class="line">Note right of B: 我在右边</span><br><span class="line">B--&gt;A: 很高兴认识你</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">digraph finite_state_machine &#123;</span><br><span class="line">    rankdir=LR;</span><br><span class="line">    size=&quot;8,5&quot;</span><br><span class="line"></span><br><span class="line">    node [shape = doublecircle]; S;</span><br><span class="line">    node [shape = point ]; qi</span><br><span class="line"></span><br><span class="line">    node [shape = circle];</span><br><span class="line">    qi -&gt; S;</span><br><span class="line">    S  -&gt; q1 [ label = &quot;a&quot; ];</span><br><span class="line">    S  -&gt; S  [ label = &quot;a&quot; ];</span><br><span class="line">    q1 -&gt; S  [ label = &quot;a&quot; ];</span><br><span class="line">    q1 -&gt; q2 [ label = &quot;ddb&quot; ];</span><br><span class="line">    q2 -&gt; q1 [ label = &quot;b&quot; ];</span><br><span class="line">    q2 -&gt; q2 [ label = &quot;b&quot; ];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
     
   </div>
   
@@ -526,35 +598,6 @@
   <div>
     
     
-<div class="my_post_copyright">
-  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
-  
-  <!-- JS库 sweetalert 可修改路径 -->
-  <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
-  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <p><span>本文标题:</span><a href="/blog/post/52a7b22c.html">前端学习笔记之js中apply()和call()方法详解</a></p>
-  <p><span>文章作者:</span><a href="/" title="访问 赵鹏程 (Pengcheng Zhao) 的个人博客">赵鹏程 (Pengcheng Zhao)</a></p>
-  <p><span>发布时间:</span>2018年03月02日 - 21:03</p>
-  <p><span>最后更新:</span>2018年03月31日 - 16:03</p>
-  <p><span>原始链接:</span><a href="/blog/post/52a7b22c.html" title="前端学习笔记之js中apply()和call()方法详解">https://pczhao.top/blog/post/52a7b22c.html</a>
-    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://pczhao.top/blog/post/52a7b22c.html"  aria-label="复制成功！"></i></span>
-  </p>
-  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
-</div>
-<script> 
-    var clipboard = new Clipboard('.fa-clipboard');
-	  $(".fa-clipboard").click(function(){
-      clipboard.on('success', function(){
-        swal({   
-          title: "",   
-          text: '复制成功',
-          icon: "success", 
-          showConfirmButton: true
-          });
-	    });
-    });  
-</script>
-
     
   </div>
 
@@ -584,7 +627,7 @@
     
     <div class="post-tags">
       
-      <a href="/blog/tags/test/" rel="tag"><i class="fa fa-tag"></i>test</a>
+      <a href="/blog/tags/Markdown/" rel="tag"><i class="fa fa-tag"></i>Markdown</a>
       
     </div>
     
@@ -593,17 +636,13 @@
     <div class="post-nav">
       <div class="post-nav-next post-nav-item">
       
-        <a href="/blog/post/a46eab8c.html" rel="next" title="hexo的next主题个性化教程:打造炫酷网站">
-        <i class="fa fa-chevron-left"></i> hexo的next主题个性化教程:打造炫酷网站
+        <a href="/blog/post/2121b11b.html" rel="next" title="Git 教程">
+        <i class="fa fa-chevron-left"></i> Git 教程
         </a>
       
       </div>
 
       <div class="post-nav-prev post-nav-item">
-      
-        <a href="/blog/post/3b8193bb.html" rel="prev" title="中文路径 是否支持">
-        中文路径 是否支持 <i class="fa fa-chevron-right"></i>
-        </a>
       
       </div>
     </div>
@@ -800,7 +839,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#定义"><span class="nav-number">1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#相同点与不同点"><span class="nav-number">2.</span> <span class="nav-text">相同点与不同点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方法使用"><span class="nav-number">3.</span> <span class="nav-text">方法使用</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#标题"><span class="nav-number">1.</span> <span class="nav-text">标题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#分级标题"><span class="nav-number">2.</span> <span class="nav-text">分级标题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#TOC"><span class="nav-number">3.</span> <span class="nav-text">TOC</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#引用"><span class="nav-number">4.</span> <span class="nav-text">引用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#行内标记"><span class="nav-number">5.</span> <span class="nav-text">行内标记</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#代码块"><span class="nav-number">6.</span> <span class="nav-text">代码块</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#插入链接"><span class="nav-number">7.</span> <span class="nav-text">插入链接</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#插入图片"><span class="nav-number">8.</span> <span class="nav-text">插入图片</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#插入图片带有链接"><span class="nav-number">9.</span> <span class="nav-text">插入图片带有链接</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#视频插入"><span class="nav-number">10.</span> <span class="nav-text">视频插入</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#序表"><span class="nav-number">11.</span> <span class="nav-text">序表</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#任务列表"><span class="nav-number">12.</span> <span class="nav-text">任务列表</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#表格"><span class="nav-number">13.</span> <span class="nav-text">表格</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#支持内嵌CSS样式"><span class="nav-number">14.</span> <span class="nav-text">支持内嵌CSS样式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#语义标记"><span class="nav-number">15.</span> <span class="nav-text">语义标记</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#语义标签"><span class="nav-number">16.</span> <span class="nav-text">语义标签</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#公式"><span class="nav-number">17.</span> <span class="nav-text">公式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#分隔符"><span class="nav-number">18.</span> <span class="nav-text">分隔符</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#脚注"><span class="nav-number">19.</span> <span class="nav-text">脚注</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#锚点"><span class="nav-number">20.</span> <span class="nav-text">锚点</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#自动邮箱链接"><span class="nav-number">21.</span> <span class="nav-text">自动邮箱链接</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#流程图"><span class="nav-number">22.</span> <span class="nav-text">流程图</span></a></li></ol></div>
             
           </div>
         </section>
